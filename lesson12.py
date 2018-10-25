@@ -12,8 +12,5 @@ dishes_list = dishes_string.split(',')
 dishes_name = []
 for dishes in dishes_list:
     dishes_name.append(dishes.strip().capitalize())
-    dishes_name_2 = set(dishes_name)
-     
-for dishes in dishes_name_2:
     random_integer = str(random.randint(0, 60))
     print(dishes + '.' * (30-len(dishes)) + random_integer + 'min')
