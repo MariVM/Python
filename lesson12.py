@@ -8,9 +8,10 @@ dishes_string = input('What would you like? ') # This is a string
 if len(dishes_string): 
 	print('Please see time to cook dishes: ')
 
-dishes_list = dishes_string.split(',')
+dishes_list = dishes_string.split(' ')
 dishes_name = []
-for dishes in dishes_list:
-    dishes_name.append(dishes.strip().capitalize())
-    random_integer = str(random.randint(0, 60))
-    print(dishes + '.' * (30-len(dishes)) + random_integer + 'min')
+
+for dishes in set(dishes_list):
+	dishes_name.append(dishes.title().strip().capitalize())
+	random_integer = str(random.randint(0, 60))
+	print(dishes + '.' * (30-len(dishes)) + random_integer + 'min')
