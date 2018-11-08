@@ -11,8 +11,6 @@ class Dish:
         self.name = name
     name_dish = 'tomato'
 
-v = Dish('white wine')
-
 def calc_time():
     return random.randint(0, 100)
 
